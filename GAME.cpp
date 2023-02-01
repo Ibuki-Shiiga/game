@@ -20,6 +20,7 @@ GAME::~GAME() {
 	for (int i = 0; i < NUM_SCENES; i++) {
 		delete Scenes[i];
 	}
+	delete Container;
 }
 void GAME::run(){
 	window(1920, 1080, full);
