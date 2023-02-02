@@ -5,18 +5,50 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="scene">
+      <UniqueIdentifier>{1ef6ef87-6214-4a93-9b40-ea53a65ad93c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene\base">
+      <UniqueIdentifier>{baf121d0-9a7f-498a-8dd4-ec739cea79ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="manager">
+      <UniqueIdentifier>{a67bbf59-4080-4891-b742-9e0e93a6a590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="container">
+      <UniqueIdentifier>{aa1b94ec-23fb-4e1d-8f48-693eb9e982e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gmain.cpp" />
-    <ClCompile Include="GAME.cpp" />
-    <ClCompile Include="GAME_OBJECT.cpp" />
-    <ClCompile Include="SCENE.cpp" />
-    <ClCompile Include="TITLE.cpp" />
-    <ClCompile Include="SELECT.cpp" />
-    <ClCompile Include="STAGE01.cpp" />
-    <ClCompile Include="STAGE02.cpp" />
-    <ClCompile Include="RESULT.cpp" />
-    <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="SCENE.cpp">
+      <Filter>scene\base</Filter>
+    </ClCompile>
+    <ClCompile Include="RESULT.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SELECT.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="STAGE01.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="STAGE02.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TITLE.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="gmain.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GAME_OBJECT.cpp">
+      <Filter>scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CONTAINER.cpp">
+      <Filter>container</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -24,14 +56,32 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GAME.h" />
-    <ClInclude Include="GAME_OBJECT.h" />
-    <ClInclude Include="SCENE.h" />
-    <ClInclude Include="TITLE.h" />
-    <ClInclude Include="SELECT.h" />
-    <ClInclude Include="STAGE01.h" />
-    <ClInclude Include="STAGE02.h" />
-    <ClInclude Include="RESULT.h" />
-    <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="SCENE.h">
+      <Filter>scene\base</Filter>
+    </ClInclude>
+    <ClInclude Include="RESULT.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SELECT.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="STAGE01.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="STAGE02.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TITLE.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GAME_OBJECT.h">
+      <Filter>scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CONTAINER.h">
+      <Filter>container</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
