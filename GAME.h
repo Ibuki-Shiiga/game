@@ -20,8 +20,17 @@ private:
 	class SCENE* Scenes[NUM_SCENES];
 	SCENE_ID CurSceneId;
 public:
+	void changeScene(SCENE_ID sceneId);
+private:
+	class BACK* Back;
+	class PLAYER* Player;
+public:
+	void draw();
+	class BACK* back() { return Back; }
+	class PLAYER* player() { return Player; }
+
+public:
 	GAME();
 	~GAME();
 	void run();
-	void changeScene(SCENE_ID sceneId);
 };

@@ -4,6 +4,7 @@
 #include"STAGE01.h"
 #include"STAGE02.h"
 #include"RESULT.h"
+#include "PLAYER.h"
 #include"CONTAINER.h"
 #include"GAME.h"
 
@@ -14,9 +15,13 @@ GAME::GAME(){
 	Scenes[STAGE01_ID] = new STAGE01(this);
 	Scenes[STAGE02_ID] = new STAGE02(this);
 	Scenes[RESULT_ID] = new RESULT(this);
-	CurSceneId = TITLE_ID;
+
+	Player = new PLAYER(this);
+	Back = new BACK(this);
 }
 GAME::~GAME() {
+	delete Back;
+	delete Player;
 	for (int i = 0; i < NUM_SCENES; i++) {
 		delete Scenes[i];
 	}
@@ -27,13 +32,24 @@ void GAME::run(){
 
 	Container->load();
 	Scenes[TITLE_ID]->create();
+	Scenes[SELECT_ID]->create();
+	Scenes[RESULT_ID]->create();
+	Player->create();
+	Back->create();
 
+	CurSceneId = TITLE_ID;
 	Scenes[CurSceneId]->init();
 	while (notQuit) {
+		setDeltaTime();
 		Scenes[CurSceneId]->proc();
 	}
 }
 
 void GAME::changeScene(SCENE_ID sceneId) {
 	CurSceneId = sceneId;
+}
+
+void GAME::draw() {
+	Back->draw();
+	Player->draw();
 }

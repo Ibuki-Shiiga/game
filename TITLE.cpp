@@ -11,10 +11,14 @@ void TITLE::create() {
 }
 //ï`âÊ
 void TITLE::draw(){
+	/*
 	clear(Title.backColor);
 	fill(Title.textColor);
 	textSize(Title.textSize);
 	text(Title.str, Title.pos.x, Title.pos.y);
+	*/
+	rectMode(CENTER);
+	image(Title.titleImg, Title.pos.x, Title.pos.y);
 }
 //ÉVÅ[ÉìêÿÇËë÷Ç¶
 void TITLE::nextScene(){

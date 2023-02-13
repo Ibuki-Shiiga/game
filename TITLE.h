@@ -6,6 +6,7 @@ class TITLE :
 {
 public:
     struct DATA {
+        int titleImg;
         COLOR backColor;
         COLOR textColor;
         float textSize;

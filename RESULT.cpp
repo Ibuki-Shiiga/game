@@ -1,4 +1,5 @@
 #include"libOne.h"
+#include"CONTAINER.h"
 #include "RESULT.h"
 #include"GAME.h"
 RESULT::RESULT(GAME* game):
@@ -6,13 +7,16 @@ RESULT::RESULT(GAME* game):
 {
 }
 RESULT::~RESULT(){}
-void RESULT::create(){}
+void RESULT::create(){
+	Result = game()->container()->result();
+}
 void RESULT::update(){}
 //ï`âÊ
 void RESULT::draw(){
-	clear();
-	printSize(300);
-	print("RESULT");
+	clear(Result.backColor);
+	fill(Result.textColor);
+	textSize(Result.textSize);
+	text(Result.str, Result.pos.x, Result.pos.y);
 }
 //ÉVÅ[ÉìêÿÇËë÷Ç¶
 void RESULT::nextScene(){
