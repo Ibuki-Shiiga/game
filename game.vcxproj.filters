@@ -52,6 +52,9 @@
     <ClCompile Include="PLAYER.cpp" />
     <ClCompile Include="PLAYER_VEC.cpp" />
     <ClCompile Include="BACK.cpp" />
+    <ClCompile Include="BULLETS.cpp" />
+    <ClCompile Include="PLAYER_BULLET.cpp" />
+    <ClCompile Include="ENEMYS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">
@@ -89,5 +92,8 @@
     <ClInclude Include="PLAYER.h" />
     <ClInclude Include="PLAYER_VEC.h" />
     <ClInclude Include="BACK.h" />
+    <ClInclude Include="BULLETS.h" />
+    <ClInclude Include="PLAYER_BULLET.h" />
+    <ClInclude Include="ENEMYS.h" />
   </ItemGroup>
 </Project>

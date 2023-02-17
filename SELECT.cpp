@@ -47,6 +47,7 @@ void SELECT::nextScene(){
 				break;
 		}
 	}
+
 	text(Select.str, Select.pos.x, Select.pos.y);
 	textSize(Select.textSize);
 	text("ゲーム01",Select.eSelect_Mode01X, Select.eSelect_Mode01Y);
@@ -72,6 +73,7 @@ void SELECT::nextScene(){
 
 	textSize(Select.textSize2);
 	text("上下キーで選択　ENTARで続行", Select.expX, Select.expY);
+
 
 
 }

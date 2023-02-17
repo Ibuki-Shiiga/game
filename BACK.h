@@ -1,18 +1,19 @@
 #pragma once
 #include "GAME_OBJECT.h"
+#include "libOne.h"
 class BACK :
     public GAME_OBJECT
 {
 public:
     struct DATA {
         int backImg;
-        float backX, backY;
+        VECTOR2 backPos;
     };
 private:
     DATA Back;
 
 public:
-    BACK(GAME* game);
+    BACK(class GAME* game);
     void create();
     void draw();
 };

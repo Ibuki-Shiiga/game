@@ -1,7 +1,6 @@
 #include <valarray>
 #include <cmath>
 #include "PLAYER_VEC.h"
-#include"CONTAINER.h"
 #include"libOne.h"
 float magnitude(struct VEC* v) {
 	return sqrt(v->x * v->x + v->y * v->y);

@@ -135,11 +135,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BACK.cpp" />
+    <ClCompile Include="BULLETS.cpp" />
     <ClCompile Include="CONTAINER.cpp" />
+    <ClCompile Include="ENEMYS.cpp" />
     <ClCompile Include="GAME.cpp" />
     <ClCompile Include="GAME_OBJECT.cpp" />
     <ClCompile Include="gmain.cpp" />
     <ClCompile Include="PLAYER.cpp" />
+    <ClCompile Include="PLAYER_BULLET.cpp" />
     <ClCompile Include="PLAYER_VEC.cpp" />
     <ClCompile Include="RESULT.cpp" />
     <ClCompile Include="SCENE.cpp" />
@@ -153,10 +156,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BACK.h" />
+    <ClInclude Include="BULLETS.h" />
     <ClInclude Include="CONTAINER.h" />
+    <ClInclude Include="ENEMYS.h" />
     <ClInclude Include="GAME.h" />
     <ClInclude Include="GAME_OBJECT.h" />
     <ClInclude Include="PLAYER.h" />
+    <ClInclude Include="PLAYER_BULLET.h" />
     <ClInclude Include="PLAYER_VEC.h" />
     <ClInclude Include="RESULT.h" />
     <ClInclude Include="SCENE.h" />

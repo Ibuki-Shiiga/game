@@ -24,10 +24,14 @@ public:
 private:
 	class BACK* Back;
 	class PLAYER* Player;
+	class ENEMYS* Enemies;
+	class PLAYER_BULLET* PlayerBullet;
 public:
 	void draw();
 	class BACK* back() { return Back; }
 	class PLAYER* player() { return Player; }
+	class ENEMYS* enemies() { return Enemies; }
+	class PLAYER_BULLET* playerBullet() { return PlayerBullet; }
 
 public:
 	GAME();

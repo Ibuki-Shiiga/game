@@ -12,7 +12,7 @@ void BACK::create(){
 }
 
 void BACK::draw(){
-	image(Back.backImg, Back.backX, Back.backY);
+	image(Back.backImg, Back.backPos.x, Back.backPos.y);
 	rectMode(CENTER);
 
 }

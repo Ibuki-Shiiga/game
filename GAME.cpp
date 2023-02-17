@@ -4,7 +4,10 @@
 #include"STAGE01.h"
 #include"STAGE02.h"
 #include"RESULT.h"
+#include"PLAYER_VEC.h"
 #include "PLAYER.h"
+#include"ENEMYS.h"
+#include "PLAYER_BULLET.h"
 #include"CONTAINER.h"
 #include"GAME.h"
 
@@ -16,12 +19,17 @@ GAME::GAME(){
 	Scenes[STAGE02_ID] = new STAGE02(this);
 	Scenes[RESULT_ID] = new RESULT(this);
 
-	Player = new PLAYER(this);
 	Back = new BACK(this);
+	Player = new PLAYER(this);
+	Enemies = new ENEMYS(this);
+	PlayerBullet = new PLAYER_BULLET(this);
+
 }
 GAME::~GAME() {
 	delete Back;
+	delete PlayerBullet;
 	delete Player;
+	delete Enemies;
 	for (int i = 0; i < NUM_SCENES; i++) {
 		delete Scenes[i];
 	}
@@ -34,8 +42,10 @@ void GAME::run(){
 	Scenes[TITLE_ID]->create();
 	Scenes[SELECT_ID]->create();
 	Scenes[RESULT_ID]->create();
-	Player->create();
 	Back->create();
+	Player->create();
+	Enemies->create();
+	PlayerBullet->create();
 
 	CurSceneId = TITLE_ID;
 	Scenes[CurSceneId]->init();
@@ -51,5 +61,7 @@ void GAME::changeScene(SCENE_ID sceneId) {
 
 void GAME::draw() {
 	Back->draw();
+	PlayerBullet->draw();
 	Player->draw();
+	Enemies->draw();
 }

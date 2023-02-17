@@ -22,7 +22,7 @@ void TITLE::draw(){
 }
 //ƒV[ƒ“Ø‚è‘Ö‚¦
 void TITLE::nextScene(){
-	if(isTrigger(KEY_SPACE)){
+	if(isTrigger(KEY_ENTER)){
 		game()->changeScene(GAME::SELECT_ID);
 	}
 }
